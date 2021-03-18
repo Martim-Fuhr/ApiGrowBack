@@ -1,9 +1,9 @@
 import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
-import CommentsMe from '../app/models/CommentsMe';
-import CommentsGrow from '../app/models/CommentsGrow';
+import Comments from '../app/models/Comments';
+import Contact from '../app/models/Contact';
 
-const models = [CommentsMe, CommentsGrow];
+const models = [Comments, Contact];
 
 class Database {
   constructor() {

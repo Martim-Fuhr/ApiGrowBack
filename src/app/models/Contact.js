@@ -1,6 +1,6 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Comment extends Model {
+class Contact extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -14,6 +14,14 @@ class Comment extends Model {
           type: Sequelize.DataTypes.STRING,
           allowNull: false,
         },
+        phone: {
+          type: Sequelize.DataTypes.INTEGER,
+          allowNull: false,
+        },
+        email: {
+          type: Sequelize.DataTypes.STRING,
+          allowNull: false,
+        },
         comment: {
           type: Sequelize.DataTypes.STRING,
           allowNull: false,
@@ -21,7 +29,7 @@ class Comment extends Model {
       },
       {
         sequelize,
-        tableName: 'comments_me',
+        tableName: 'contact',
         schema: 'api_growdev',
       }
     );
@@ -29,4 +37,4 @@ class Comment extends Model {
   }
 }
 
-export default Comment;
+export default Contact;

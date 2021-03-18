@@ -1,7 +1,7 @@
-module.exports = {
+"use strict";module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable(
-      'comments_grow',
+      'comments',
       {
         id: {
           type: Sequelize.DataTypes.INTEGER,
@@ -10,10 +10,6 @@ module.exports = {
           primaryKey: true,
         },
         name: {
-          type: Sequelize.DataTypes.STRING,
-          allowNull: false,
-        },
-        email: {
           type: Sequelize.DataTypes.STRING,
           allowNull: false,
         },
@@ -38,8 +34,8 @@ module.exports = {
 
   down: async queryInterface => {
     await queryInterface.dropTable({
-      tableName: 'comments_grow',
-      schema: 'api_grodev',
+      tableName: 'comments',
+      schema: 'api_growdev',
     });
   },
 };

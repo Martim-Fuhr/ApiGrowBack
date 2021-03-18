@@ -1,6 +1,6 @@
 "use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _sequelize = require('sequelize'); var _sequelize2 = _interopRequireDefault(_sequelize);
 
-class Comment extends _sequelize.Model {
+class Comments extends _sequelize.Model {
   static init(sequelize) {
     super.init(
       {
@@ -14,10 +14,6 @@ class Comment extends _sequelize.Model {
           type: _sequelize2.default.DataTypes.STRING,
           allowNull: false,
         },
-        email: {
-          type: _sequelize2.default.DataTypes.STRING,
-          allowNull: false,
-        },
         comment: {
           type: _sequelize2.default.DataTypes.STRING,
           allowNull: false,
@@ -25,7 +21,7 @@ class Comment extends _sequelize.Model {
       },
       {
         sequelize,
-        tableName: 'comments_grow',
+        tableName: 'comments',
         schema: 'api_growdev',
       }
     );
@@ -33,4 +29,4 @@ class Comment extends _sequelize.Model {
   }
 }
 
-exports. default = Comment;
+exports. default = Comments;

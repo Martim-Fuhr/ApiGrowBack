@@ -1,4 +1,4 @@
-import commentsMe from './commentsMe';
-import commentsGrow from './commentsGrow';
+import comments from './comments';
+import contact from './contact';
 
-export default [commentsMe, commentsGrow];
+export default [comments, contact];

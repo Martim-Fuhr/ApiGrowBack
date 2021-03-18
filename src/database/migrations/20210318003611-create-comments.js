@@ -1,7 +1,7 @@
-"use strict";module.exports = {
+module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable(
-      'comments_me',
+      'comments',
       {
         id: {
           type: Sequelize.DataTypes.INTEGER,
@@ -34,7 +34,7 @@
 
   down: async queryInterface => {
     await queryInterface.dropTable({
-      tableName: 'comments_me',
+      tableName: 'comments',
       schema: 'api_growdev',
     });
   },

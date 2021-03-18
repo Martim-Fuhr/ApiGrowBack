@@ -1,7 +1,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable(
-      'comments_me',
+      'contact',
       {
         id: {
           type: Sequelize.DataTypes.INTEGER,
@@ -10,6 +10,14 @@ module.exports = {
           primaryKey: true,
         },
         name: {
+          type: Sequelize.DataTypes.STRING,
+          allowNull: false,
+        },
+        phone: {
+          type: Sequelize.DataTypes.INTEGER,
+          allowNull: false,
+        },
+        email: {
           type: Sequelize.DataTypes.STRING,
           allowNull: false,
         },
@@ -34,8 +42,8 @@ module.exports = {
 
   down: async queryInterface => {
     await queryInterface.dropTable({
-      tableName: 'comments_me',
-      schema: 'api_growdev',
+      tableName: 'contact',
+      schema: 'api_grodev',
     });
   },
 };
