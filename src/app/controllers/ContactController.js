@@ -12,6 +12,9 @@ class ContactController {
 
   async store(request, response) {
     const { name, phone, email, comment } = request.body;
+    if (name || phone || email || comment === '') {
+      return response.json({ message: 'Campos inválidos' });
+    }
     return response.json(await Contact.create({ name, phone, email, comment }));
   }
 
