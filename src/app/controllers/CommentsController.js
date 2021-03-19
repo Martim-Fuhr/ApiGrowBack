@@ -12,7 +12,7 @@ class CommentsController {
 
   async store(request, response) {
     const { name, comment } = request.body;
-    if (name || comment === '') {
+    if (name === '' || comment === '') {
       return response.json({ message: 'Campos inválidos' });
     }
     return response.json(await Comments.create({ name, comment }));
